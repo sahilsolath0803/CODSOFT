@@ -1,0 +1,481 @@
+*{
+    padding: 0px;
+    margin: 0px;
+}
+
+body{
+    background-color: #02001e;
+}
+
+nav img{
+    padding-left: 6%;
+}
+
+nav{
+    display: flex;
+    justify-content: space-between;
+    border: 2px solid #1c1c1c;
+    position: fixed;
+    width: 100%;
+    background-color: #02001e;
+    z-index: 1;
+}
+
+nav ul{
+    display: flex;
+}
+
+nav li{
+    list-style: none;
+    padding: 30px;
+}
+
+nav a{
+    text-decoration: none;
+    font-size: x-large;
+    font-weight: bolder;
+    color: aqua;
+}
+
+nav a:hover{
+    color: #c2dcf7;
+}
+
+.info, #about{
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 12% 3%;
+}
+
+.intro div{
+    font-size: xx-large;
+}
+
+.intro p{
+    width: 30vw;
+    padding-top: 2%;
+    color: #e3e3e3;
+    font-family: sans-serif;
+}
+
+.intro div span{
+    font-size: xxx-large;
+    color: aqua;
+}
+.intro button{
+    color: aqua;
+    border: 1px solid aqua;
+    margin-top: 25px;
+    padding: 12px 10px;
+    margin-right: 20px;
+    border-radius: 12px;
+    background-color: #02001e;
+    font-family: sans-serif;
+    font-weight: 600;
+    font-size: 15px;
+}
+.intro button:hover{
+    transition: all 0.4s linear 0s;
+    background-color: aqua;
+    color: black;
+}
+
+.info img, #about img{
+    width: 50vw;
+}
+
+.line{
+    border: 1px solid #5c6285;
+}
+
+.aboutme{
+    font-size: xxx-large;
+}
+
+.aboutme span{
+    color: #ff6161;
+}
+
+.aboutskill{
+    font-size: x-large;
+    color: aqua;
+    padding-bottom: 20px;
+}
+
+.abouttxt p{
+    font-size: larger;
+}
+
+.abouttxt p span{
+    font-size: x-large;
+    color: aqua;
+}
+
+
+
+
+.head{
+    text-align: center;
+    color: white;
+    font-size: 50px;
+    padding-top: 120px;
+    padding-bottom: 0px;
+}
+
+.skillTitle span{
+    color: aqua;
+}
+
+.skillsection{
+    display: flex;
+    /* flex-wrap: wrap; */
+    justify-content: space-evenly;
+    color: white;
+    width: 82%;
+    height: 100%;
+    padding: 55px 0px;
+    margin-left: 9%;
+}
+
+.heading1{
+    text-align: center;
+    text-decoration: underline;
+    text-underline-offset: 10px;
+    color: white;
+    margin-bottom: 50px;
+}
+
+.techskill{
+    width: 35%;
+}
+
+.techbar .bar{
+    margin: 10px 0px;
+    font-size: 23px;
+}
+
+.techbar .bar:first-child{
+    margin-top: 0px;
+}
+
+.techbar .bar:last-child{
+    margin-bottom: 0px;
+}
+
+.indinfo{
+    margin-bottom: 6px;
+}
+
+.indinfo span{
+    font-size: 20px;
+    font-weight: 500;
+    animation: showText 0.5s 1s linear forwards;
+    color: white;
+}
+
+.techbar .bar .progressline{
+    position: relative;
+    border-radius: 10px;
+    width: 100%;
+    height: 5px;
+    background-color: gray;
+    animation: animate 1s cubic-bezier(1,0,0.5,1) forwards;
+    transform: scaleX(0);
+    transform-origin: left;
+}
+
+@keyframes animate{
+    100%{
+        transform: scaleX(1);
+    }
+}
+
+.techbar .bar .progressline span{
+    height: 100%;
+    background-color: aqua;
+    position: absolute;
+    border-radius: 10px;
+    animation: animate 1s 1s cubic-bezier(1,0,0.5,1) forwards;
+    transform: scaleX(0);
+    transform-origin: left;
+}
+
+.progressline.html span{
+    width: 90%;
+}
+.progressline.css span{
+    width: 75%;
+}
+.progressline.js span{
+    width: 60%;
+}
+.progressline.python span{
+    width: 85%;
+}
+.progressline.cplus span{
+    width: 75%;
+}
+.progressline.dsa span{
+    width: 70%;
+}
+
+.progressline span::after{
+    position: absolute;
+    padding: 1px 8px;
+    background-color: rgb(6, 6, 6);
+    color: white;
+    font-size: 15px;
+    border-radius: 7px;
+    top: -28px;
+    right: -20px;
+    animation: showText 0.5s 1.5s linear forwards;
+    opacity: 0;
+}
+
+.progressline span::before{
+    content: "";
+    position: absolute;
+    width: 0px;
+    height: 0px;
+    border: 7px solid transparent;
+    border-bottom-width: 0px;
+    border-right-width: 0px;
+    border-top-color: rgb(0, 0, 0);
+    top: -10px;
+    right: 0px;
+    animation: showText 0.5s 1.5s linear forwards;
+    opacity: 0;
+}
+
+@keyframes showText{
+    100%{
+        opacity: 1;
+    }
+}
+
+.progressline.html span::after{
+    content: "90%";
+}
+.progressline.css span::after{
+    content: "75%";
+}
+.progressline.js span::after{
+    content: "60%";
+}
+.progressline.python span::after{
+    content: "85%";
+}
+.progressline.cplus span::after{
+    content: "75%";
+}
+.progressline.dsa span::after{
+    content: "70%";
+}
+
+.radbars{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: flex-start;
+}
+
+.radbars .radbar{
+    width: 50%;
+    height: 170px;
+    margin-bottom: 10px;
+    position: relative;
+}
+
+.radbars .radbar svg{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%) rotate(-90deg);
+    width: 120px;
+    height: 160px;
+}
+
+.radbars .radbar .progressbar{
+    stroke-width: 10px;
+    stroke: black;
+    fill: transparent;
+    stroke-dasharray: 502;
+    stroke-dashoffset: 502;
+    stroke-linecap: round;
+    animation: animate-bar 1s linear forwards;
+}
+
+@keyframes animate-bar{
+    100%{
+        stroke-dashoffset: -1;
+    }
+}
+
+.path{
+    stroke-width: 10px;
+    stroke: aqua;
+    fill: transparent;
+    stroke-dasharray: 502;
+    stroke-dashoffset: 502;
+    stroke-linecap: round;
+}
+.path1{animation: animate-path1 1s 1s linear forwards;}
+.path2{animation: animate-path2 1s 1s linear forwards;}
+.path3{animation: animate-path3 1s 1s linear forwards;}
+.path4{animation: animate-path4 1s 1s linear forwards;}
+
+@keyframes animate-path1{
+    100%{
+        stroke-dashoffset: 175;
+    }
+}
+@keyframes animate-path2{
+    100%{
+        stroke-dashoffset: 150;
+    }
+}
+@keyframes animate-path3{
+    100%{
+        stroke-dashoffset: 100;
+    }
+}
+@keyframes animate-path4{
+    100%{
+        stroke-dashoffset: 125;
+    }
+}
+
+.radbar .percentage{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 17px;
+    font-weight: 500;
+    animation: showText 0.5s 1s linear forwards;
+    opacity: 0;
+}
+
+.progressbar .text{
+    width: 100%;
+    position: absolute;
+    text-align: center;
+    left: 50%;
+    bottom: -5px;
+    transform: translate(-50%);
+    font-size: 17px;
+    font-weight: 500;
+    animation: showText 0.5s 1s linear forwards;
+    opacity: 0;
+}
+
+.certificates{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    padding: 0px 230px;
+}
+
+.certbox{
+    width: 22%;
+    height: 260px;
+    margin: 75px 10px;
+    margin-bottom: 0px;
+    border: 1px solid aqua;
+    border-radius: 30px;
+    padding: 25px;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    color: white;
+}
+
+.certbox h3{
+    padding: 13px 0px;
+}
+
+.certbox button{
+    width: 60%;
+    background-color: #02001e;
+    color: aqua;
+    font-size: 13px;
+    font-weight: 600;
+    margin: 30px 0px;
+    padding: 12px 2px;
+    border: 1px solid aqua;
+    border-radius: 10px;
+}
+.certbox:hover{
+    /* width: 16rem;
+    height: 18rem;
+    margin: 63px -1.5px;
+    margin-bottom: -26px;
+    background-color: black; */
+    transform: scale(1.1);
+    transition: all 0.3s linear 0s;
+}
+.certbox button:hover{
+    transition: all 0.4s linear 0s;
+    background-color: aqua;
+    color: black;
+}
+
+.msg{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: 2% 33%;
+    border-radius: 20px;
+    padding: 6px 2px;
+    box-shadow: 0px 0px 20px 10px aqua;
+}
+.msg input{
+    height: 40px;
+    width: 15vw;
+    margin: 5px;
+    border-radius: 10px;
+    padding: 5px 7px;
+    background-color: #02001e;
+    color: white;
+    font-size: 16px;
+    border: 1px solid aqua;
+}
+.msg input::placeholder{
+   color: #b8b8b8;
+}
+
+.msg #typeMsg{
+    margin: 5px;
+    padding: 12px;
+    border-radius: 10px;
+    background-color: #02001e;
+    border: 1px solid aqua;
+    color: white;
+    font-size: 16px;
+}
+
+.msg button{
+    background-color: #02001e;
+    color: aqua;
+    font-size: 13px;
+    font-weight: 600;
+    margin: 25px 0px;
+    padding: 15px 10px;
+    border: 1px solid aqua;
+    border-radius: 16px;
+}
+.msg button:hover{
+    transition: all 0.4s linear 0s;
+    background-color: aqua;
+    color: black;
+}
+
+.footer p{
+    color: aqua;
+    font-size: 17px;
+    text-align: center;
+    padding: 10px;
+}
